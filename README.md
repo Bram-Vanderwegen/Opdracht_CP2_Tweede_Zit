@@ -1,4 +1,4 @@
-# Opdracht_CP_Tweede_Zit
+# Opdracht_CP2_Tweede_Zit
 In main staat de volledige code voor het programma.
 
 het programma werkt volledig: er kan een bmp file gegeven worden en hiervan komen dan de drie kleurenoututs<br>
