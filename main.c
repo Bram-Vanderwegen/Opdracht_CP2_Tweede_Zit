@@ -142,9 +142,19 @@ void argumentshandler(int argcount, char const *argvector[], char filename[100])
 			printf("The image can be of any size\n");
 			printf("The image encoding needs to be of the type 'BITMAPINFOHEADER'\n");
 			printf("------------------------\n\n");
+			if(argcount == 2){
+				printf("error cannot find input file\n");
+				exit(1);
+			}
 		}
-		if(strstr(argvector[i], ".bmp") != NULL){
-			strcpy(filename, argvector[i]);
+		if(strcmp(argvector[i], "-i") == 0){
+			if(strstr(argvector[i + 1], ".bmp") != NULL){
+				strcpy(filename, argvector[i + 1]);
+			}
+			else{
+				printf("error cannot find input file\n");
+				exit(1);
+			}
 		}
 	}
 }
